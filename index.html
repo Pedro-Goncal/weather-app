@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,7 +16,7 @@
   </head>
   <body class="text-center">
     <main>
-      <h1 class="banner p-3">Weather</h1>
+      <h1 class="banner">Weather</h1>
       <div class="form-group">
         <input
           id="city-input"
@@ -27,26 +28,58 @@
       <button type="button" onclick="searchCity()" class="btn btn-lg btn-dark">
         Search
       </button>
-      <div id="weather-output" class="mt-3">
-        <div class="card-deck mb-3 text-center">
-          <div class="card mb-4 shadow-sm">
-            <div class="card-header">
-              <h4 id="city-name" class="my-0 font-weight-normal">----</h4>
-              <h6 class="my-0 font-weight-normal">
-                Lat: <span id="lat">----</span>° Lon:
-                <span id="lon">----</span>°
-              </h6>
-            </div>
-            <div class="card-body">
-              <h1 id="weather-type" class="card-title">----</h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Temp: <span id="temp">--</span>°</li>
-                <li>It feels like: <span id="feels">--</span>°</li>
-                <li>Min Temp: <span id="min-temp">--</span>°</li>
-                <li>Max Temp: <span id="max-temp">--</span>°</li>
-                <li>Humidity: <span id="humidity">--</span>%</li>
-              </ul>
-            </div>
+
+      <div class="weatherCard">
+          <div class="weatherCard__image">
+            <img src="" alt="" id='image' />
+          </div>
+          <div class="weatherCard__temp">
+            <span class="weekday" id="weekday"></span>
+            <span class="temp"><span id="temp">--</span>°</span>
+            <span id="weather-type" class="weather__type">----</span>
+          </div>
+          <div class="weatherCard__banner__info">
+            <span id="city-name" class="city__name">----</span>
+            <span class="my-0 font-weight-normal">
+              Lat: <span id="lat">--</span>° Lon: <span id="lon">--</span>°
+            </span>
+            <span>It feels like: <span id="feels">--</span>°</span>
+            <span>Min Temp: <span id="min-temp">--</span>°</span>
+            <span>Max Temp: <span id="max-temp">--</span>°</span>
+            <span>Humidity: <span id="humidity">--</span>%</span>
+          </div>
+        </div>
+      </div>
+      <div class="weekdays">
+        <div class="dayCard1" >
+          <p id="day1">Monday</p>
+          <img src="" alt="" id="fImage1" class="forcastImg">
+          <span><span class='forecast-temp' id="forecast-temp1">--</span>°</span>
+        </div>
+        <div class="dayCard1" >
+          <p id="day2">Monday</p>
+          <img src="" alt="" id="fImage2" class="forcastImg">
+          <span><span class='forecast-temp' id="forecast-temp2">--</span>°</span>
+        </div>
+        <div class="dayCard1">
+          <p id="day3">Monday</p>
+          <img src="" alt="" id="fImage3" class="forcastImg">
+          <span><span class='forecast-temp' id="forecast-temp3">--</span>°</span>
+        </div>
+        <div class="dayCard1">
+          <p id="day4">Monday</p>
+          <img src="" alt="" id="fImage4" class="forcastImg">
+          <span><span class='forecast-temp' id="forecast-temp4">--</span>°</span>
+        </div>
+          <div class="dayCard1">
+            <p id="day5">Monday</p>
+            <img src="" alt="" id="fImage5" class="forcastImg">
+            <span><span class='forecast-temp' id="forecast-temp5">--</span>°</span>
+          </div>
+          <div class="dayCard1">
+            <p id="day6">Monday</p>
+            <img src="" alt="" id="fImage6" class="forcastImg">
+            <span><span class='forecast-temp' id="forecast-temp6">--</span>°</span>
           </div>
         </div>
       </div>
